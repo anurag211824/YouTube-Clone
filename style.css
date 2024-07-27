@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html,
+body {
+  width: 100%;
+}
+body {
+  padding-top: 70px;
+  padding-left: 130px;
+}
+
+/* ...................header-section....................... */
+
+.header {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 1000;
+}
+.header .left-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.header .menu-bar {
+  height: 24px;
+}
+.header .youtube-logo {
+  height: 20px;
+}
+.header .middle-section {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 470px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+.header .middle-section .search-field {
+  height: 40px;
+  flex: 1;
+  width: 0;
+  min-width: 0;
+  padding-left: 12px;
+  font-size: 16px;
+  background-color: rgb(255, 253, 253);
+  border: 0.3px solid grey;
+  border-radius: 2px;
+  box-shadow: 0 4px -inset rgba(0, 0, 0, 0.2);
+}
+.header .middle-section .search-logo-img {
+  height: 40px;
+  width: 64px;
+  border: 1px solid grey;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(233, 233, 233);
+  margin-right: 20px;
+  border: 0.5px solid grey;
+  margin-left: -3px;
+  cursor: pointer;
+}
+.header .middle-section .mic-logo-img {
+  height: 40px;
+  padding: 6px;
+  border: 1px solid grey;
+  background-color: rgb(233, 233, 233);
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.header .right-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-right: 10px;
+}
+.header .right-section .upload,
+.apps,
+.notification,
+.account-image {
+  height: 30px;
+}
+
+/* .........................video-container........................... */
+.video-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px 5px;
+}
+.video-box {
+  padding: 2px;
+}
+.video-thumbnail {
+  width: 100%;
+}
+.video-info {
+  display: flex;
+  gap: 10px;
+}
+.channel-profile {
+  height: 36px;
+  width: 36px;
+  border-radius: 18px;
+}
+.video-title .title {
+  font-size: 15px;
+  font-weight: 550;
+  margin-bottom: 10px;
+}
+.video-title .channel-name {
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+.video-title .channel-name {
+  font-size: 14px;
+  margin-bottom: 2px;
+  color: rgb(91, 90, 90);
+}
+.video-title .view {
+  font-size: 13px;
+  color: rgb(91, 90, 90);
+}
+
+/* .........................sidebar.................................... */
+
+.sideBar {
+  position: fixed;
+  background-color: #f1f1f1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 130px;
+  padding-top: 60px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-size: 13px;
+  background-color: white;
+}
+
+.side-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60px;
+  padding: 5px 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.side-box:hover {
+  background-color: #dcdcdc; 
+}
+
+.icon {
+  height: 20px;
+  margin-bottom: 2px;
+}
+
+.side-box span {
+  font-size: 9px; 
+  color: #333; 
+}
+
+
+/* ........................media-query....................................... */
+
+@media(max-width: 768px) {
+  .video-container {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+
+@media(max-width: 480px) {
+  .video-container {
+    grid-template-columns: 1fr; 
+  }
+  .header .middle-section {
+    display: none;
+  }
+
+  .sideBar {
+    position: fixed;
+    background-color: #f1f1f1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    padding-top: 60px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-size: 10px;
+    background-color: white;
+  }
+  
+  .side-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60px;
+    padding: 5px 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+  }
+  .icon {
+    height: 15px;
+    margin-bottom: 2px;
+  }
+  
+  body {
+    padding-top: 40px;
+    padding-left: 80px;
+  }
+
+
+
+
+
+}
