@@ -152,7 +152,9 @@ body {
 }
 
 /* .........................sidebar.................................... */
-
+.close-btn{
+  display: none;
+}
 .sideBar {
   position: fixed;
   background-color: #f1f1f1;
@@ -209,47 +211,86 @@ body {
     padding-top: 30px;
     padding-left: 0px;
   }
-  .menu-bar{
-    display: none;
+  
+  .youtube-logo {
+    width: 80px;
   }
+
   .video-container {
     grid-template-columns: 1fr; 
     width: 100%;
   }
+  
   .header .middle-section {
     display: none;
   }
 
   .sideBar {
-    display:none;
+    display: none; /* Hidden by default */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 10px;
   }
 
-  /* .side-box {
-    display: none;
+  .close-btn {
+    position: absolute;
+    top: 5;
+    right: 0;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 10px;
+    line-height: 1;
+  }
+
+  .side-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 60px;
-    padding: 5px 5px;
+    padding: 5px;
     margin-bottom: 5px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
     text-align: center;
-  } */
+  }
+
   .icon {
     height: 15px;
     margin-bottom: 2px;
   }
 
-
   .header .right-section .upload,
-.apps,
-.notification,
-.account-image {
-  height: 25px;
-}
-.right-section{
-  gap:5px;
-}
+  .apps,
+  .notification,
+  .account-image {
+    height: 25px;
+  }
+
+  .header .right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+  }
+
+  .header .left-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 }
