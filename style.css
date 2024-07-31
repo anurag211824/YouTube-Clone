@@ -9,7 +9,7 @@ body {
   width: 100%;
 }
 body {
-  padding-top: 70px;
+  padding-top: 50px;
   padding-left: 130px;
 }
 
@@ -103,8 +103,25 @@ body {
 .video-box {
   padding: 2px;
 }
+.video{
+  position: relative;
+
+}
+.timer{
+  position: absolute;
+  bottom: 7px;
+  right: 4px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  font-size: 12px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-weight: 500;
+  
+}
 .video-thumbnail {
   width: 100%;
+  position: relative;
 }
 .video-info {
   display: flex;
@@ -188,28 +205,27 @@ body {
 
 
 @media(max-width: 480px) {
+  body {
+    padding-top: 30px;
+    padding-left: 0px;
+  }
+  .menu-bar{
+    display: none;
+  }
   .video-container {
     grid-template-columns: 1fr; 
+    width: 100%;
   }
   .header .middle-section {
     display: none;
   }
 
   .sideBar {
-    position: fixed;
-    background-color: #f1f1f1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 80px;
-    padding-top: 60px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    font-size: 10px;
-    background-color: white;
+    display:none;
   }
-  
-  .side-box {
+
+  /* .side-box {
+    display: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -220,19 +236,20 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
     text-align: center;
-  }
+  } */
   .icon {
     height: 15px;
     margin-bottom: 2px;
   }
-  
-  body {
-    padding-top: 40px;
-    padding-left: 80px;
-  }
 
 
-
-
-
+  .header .right-section .upload,
+.apps,
+.notification,
+.account-image {
+  height: 25px;
+}
+.right-section{
+  gap:5px;
+}
 }
